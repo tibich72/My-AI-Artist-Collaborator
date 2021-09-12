@@ -1,0 +1,130 @@
+body {
+   /*background-image:url("Donegal_Tweed.jpg");*/
+   background-image: url(https://tibichelcea.net/wp-content/uploads/2020/01/1_background.jpg);
+   background-position: left top;
+   background-size: auto;
+   background-repeat: repeat;
+   background-attachment: scroll;
+}
+
+#container {
+   width: 75%;
+   height: 98vh;
+   margin: 0 auto;
+   position: relative;
+   background-color: white;
+   padding-top: 1px;
+}
+
+#droparea{
+   min-width: 60%;
+   height:105px;
+   border: 2px solid lightslategrey;
+   border-radius: 3px;
+   margin: 0 auto;
+   margin-top: 10px;
+   text-align: center;
+   overflow: auto;
+   display: table;
+   background-color: white;
+}
+
+#droparea:hover{
+    cursor: pointer;
+}
+
+#droparea h1{
+   text-align: center;
+   font-weight: normal;
+   font-family: sans-serif;
+   line-height: 30px;
+   font-size: 1.5em;
+   color: darkorange;
+   display: table-cell;
+   vertical-align: middle;
+}
+
+#generateControls{
+   display: block;
+   text-align: center;
+}
+
+#waitFileUpload{
+   height: 100px;
+   display: table-cell;
+   vertical-align: middle;
+   margin: 0 auto;
+}
+
+#control-area { 
+   background-color: rgb(230, 230, 230);
+   margin: 15px;
+}
+
+#controls {
+   display: flex;
+   height: 130px;
+   border: 1px solid #8d8d8d;
+}
+#modes {
+   width: 30%;
+}
+.controls-child{
+   line-height: 130px;
+   vertical-align: middle;
+   display: -webkit-inline-box;
+   width: 70%;
+}
+#suggestItem:not(selected) {
+   border-top-right-radius: 30px
+}
+#generateItem:not(selected) {
+   border-bottom-right-radius: 30px
+}
+
+.radio-item{    
+   font-size: 1.2em;
+   line-height: 65px;
+   vertical-align: middle;
+   padding-left: 10px;
+   cursor: pointer;
+}
+.radio-item:not(selected) {
+   background-color: gray;
+   color: darkorange;
+   font-size: 1.2em;
+   font-weight: normal;
+   cursor: pointer;
+   line-height: 30px;
+}
+.radio-item.selected {
+   background-color: transparent;
+   color:black;
+   font-size: 1.3em;
+   cursor: default;
+   font-weight: 900;
+   line-height: 100px;
+}
+
+#render-area {
+   margin-top:10px;
+   text-align:center;
+}
+
+.size{
+    font-size:12px;
+}
+#btnSuggest {
+   margin-right: 15px;
+}
+
+button {
+   background-color: #f1f1f1;
+   margin: 2px;
+   border-radius: 8px;
+   outline: none;
+   cursor: pointer;
+   padding: 14px 16px;
+   transition: 0.3s;
+   font-size: 1.1em;
+}

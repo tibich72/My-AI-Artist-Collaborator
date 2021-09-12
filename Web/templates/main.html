@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+<head>
+   <title>My AI Artistic Collaborator</title>
+   <link rel="icon" href="static/icon.png">
+   <link href="static/style.css" rel="stylesheet" type="text/css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <!-- <script src="jquery.elevatezoom.js" defer></script> -->
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+   <script src="static/pcb_main.js" type="text/javascript" defer></script> 
+   <!-- <meta http-equiv="refresh" content="25" > -->
+</head>
+
+<body>
+   <div id="container">
+      <div id="control-area">
+         <div id="controls">
+            <div id="modes">
+               <div id="generateItem" class="radio-item selected" onclick="changeMode('generate')">Generate boards</div>
+               <div id="suggestItem" class="radio-item" onclick="changeMode('suggest')">Suggest completion</div>
+            </div>
+            <div class="controls-child" id="generateControls">
+               <button class="toplinks defaultOpen" id="btnGenerate" onclick="generateNewBoard()">Generate New Board</button>
+            </div>
+            <div class="controls-child" id="suggestControls">
+               <div id="droparea">
+                  <h1 id="h1Message">Drop Eagle file here</h1>
+                  <img id="waitFileUpload" src="static/wait.gif">
+               </div>
+               <button class="toplinks" id="btnSuggest" onclick="suggestAgainBoardCompletion()">New suggestion</button>
+            </div>
+         </div>
+      </div>
+      
+
+      <div id="render-area" class="topcontent">
+         <div id="placeholder"></div>
+      </div>
+
+      <div id="Palettes" class="topcontent">
+
+      </div>
+
+   </div>
+   
+   <script type="text/javascript">
+      $(document).ready(function() {
+			toastr.options = {
+				'closeButton': true,
+				'debug': false,
+				'newestOnTop': false,
+				'progressBar': false,
+				'positionClass': 'toast-top-right',
+				'preventDuplicates': false,
+				'showDuration': '3000',
+				'hideDuration': '1000',
+				'timeOut': '5000',
+				'extendedTimeOut': '1000',
+				'showEasing': 'swing',
+				'hideEasing': 'linear',
+				'showMethod': 'fadeIn',
+				'hideMethod': 'fadeOut',
+			}
+		});
+   </script>
+</body>
+
+</html>
